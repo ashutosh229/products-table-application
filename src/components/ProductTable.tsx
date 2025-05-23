@@ -63,6 +63,18 @@ const ProductTable: React.FC<ProductTableProps> = ({
       setUpdating(null);
     }
   };
+
+  const handleDelete = async (id: number) => {
+    try {
+      setDeleting(id);
+      await onDeleteProduct(id);
+    } finally {
+      setDeleting(null);
+    }
+  };
+
+  
+
   };
 
 
