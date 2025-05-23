@@ -73,7 +73,17 @@ const ProductTable: React.FC<ProductTableProps> = ({
     }
   };
 
-  
+  const resetFilters = () => {
+    setFilters({
+      title: '',
+      brand: null,
+      category: null,
+      price: null,
+      rating: null,
+    });
+  };
+
+
 
   };
 
