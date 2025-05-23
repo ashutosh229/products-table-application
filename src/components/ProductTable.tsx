@@ -35,6 +35,17 @@ const ProductTable: React.FC<ProductTableProps> = ({
         //unique values for filter dropdowns
   const getUniqueValues = (field: keyof Product) => {
     return Array.from(new Set(products.map(product => String(product[field])))).sort();
+
+//getting the products after applying the filters
+    const filteredProducts = products.filter(product => {
+        return (
+          product.title.toLowerCase().includes(filters.title.toLowerCase()) &&
+          (!filters.brand || product.brand === filters.brand) &&
+          (!filters.category || product.category === filters.category) &&
+          (!filters.price || String(product.price) === filters.price) &&
+          (!filters.rating || String(product.rating) === filters.rating)
+        );
+      });
   };
 
 
