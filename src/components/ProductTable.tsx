@@ -46,6 +46,23 @@ const ProductTable: React.FC<ProductTableProps> = ({
           (!filters.rating || String(product.rating) === filters.rating)
         );
       });
+
+//handler for updating the states, deoending on the product being edited
+      const handleEdit = (product: Product) => {
+        setEditingId(product.id);
+        setEditValue(product.title);
+      };
+
+      
+  const handleSave = async (id: number) => {
+    try {
+      setUpdating(id);
+      await onUpdateTitle(id, editValue);
+      setEditingId(null);
+    } finally {
+      setUpdating(null);
+    }
+  };
   };
 
 
