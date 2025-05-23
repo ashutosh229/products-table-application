@@ -1,0 +1,1 @@
+export const fetchProducts = async (): Promise<>
