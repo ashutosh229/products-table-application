@@ -32,6 +32,11 @@ const ProductTable: React.FC<ProductTableProps> = ({
       const [updating, setUpdating] = useState<number | null>(null);
       const [deleting, setDeleting] = useState<number | null>(null);
 
+        //unique values for filter dropdowns
+  const getUniqueValues = (field: keyof Product) => {
+    return Array.from(new Set(products.map(product => String(product[field])))).sort();
+  };
+
 
 
 
