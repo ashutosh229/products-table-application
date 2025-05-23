@@ -1,5 +1,6 @@
-import React from "react";
-import { Product } from "../types/products";
+import React, { useState } from "react";
+import type { FilterState, Product } from "../types/products";
+
 
 interface ProductTableProps {
   products: Product[];
@@ -14,8 +15,30 @@ const ProductTable: React.FC<ProductTableProps> = ({
   onUpdateTitle,
   onDeleteProduct,
 }) => {
+    //state for managing the filters
+    const [filters, setFilters] = useState<FilterState>({
+        title: '',
+        brand: null,
+        category: null,
+        price: null,
+        rating: null,
+      });
+
+      //state for managing the id of the product whose title is being edited
+      const [editingId, setEditingId] = useState<number | null>(null);
+      //state for managing the value of the title being edited
+      const [editValue, setEditValue] = useState('');
+      //states depending on the action being performed (delete or update)
+      const [updating, setUpdating] = useState<number | null>(null);
+      const [deleting, setDeleting] = useState<number | null>(null);
+
+
+
+
+
+
     return (
-        
+
     )
 };
 
