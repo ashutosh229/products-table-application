@@ -69,3 +69,14 @@ npm run build
 ## 🌐 Deployed URL
 
 🔗 [Click here to view the live application](https://products-table-application.vercel.app/)
+
+├── src/
+│   ├── components/       # Reusable table and filter UI components
+│   ├── data/             # Sample product JSON data
+│   ├── hooks/            # Custom React hooks
+│   └── utils/            # Helper functions for filtering, sorting, etc.
+├── public/
+│   └── assets/           # Static images like screenshots, logos, banners
+├── tailwind.config.js    # Tailwind configuration
+├── vite.config.ts        # Vite configuration
+└── README.md
