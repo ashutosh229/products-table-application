@@ -1,4 +1,4 @@
-# Product Management Application
+# Products Table Application
 
 A modern and responsive React application built with Vite and TypeScript, used for managing and filtering product data via tables.
 
@@ -61,3 +61,8 @@ npm run dev --debug
 ```bash
 npm run build
 ```
+
+## 🌐 Deployed URL
+
+Check out the live application here: [Deployed URL](https://products-table-application.vercel.app/)
+
