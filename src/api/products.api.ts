@@ -28,6 +28,7 @@ export const fetchProducts = async (): Promise<Product[]> => {
   }
 };
 
+//service for updating the product after editing the title
 export const updateProductTitle = async (
   id: number,
   title: string
@@ -36,7 +37,7 @@ export const updateProductTitle = async (
     return product.id === id;
   });
   if (productIndex === -1) {
-    //error handling to be done
+    throw new Error("Product not found");
   }
   const updatedProduct = { ...products[productIndex], title };
   products[productIndex] = updatedProduct;
@@ -45,6 +46,7 @@ export const updateProductTitle = async (
   });
 };
 
+//service for deleting the product
 export const deleteProduct = async (id: number): Promise<void> => {
   products = products.filter((product) => {
     return product.id !== id;
