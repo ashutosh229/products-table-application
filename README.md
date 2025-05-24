@@ -11,3 +11,19 @@ A modern and responsive React application built with Vite and TypeScript, used f
 - 💾 **Local Storage**: Automatic data persistence without database complexities
 - ⚡ **Performance Optimized**: Memoized calculations and efficient re-renders
 - 🎨 **Modern UI**: Clean and professional interface with smooth animations
+
+## Quick Start
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/ashutosh229/products-table-application.git
+cd products-table-application
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev --debug
+```
