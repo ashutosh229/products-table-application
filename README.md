@@ -12,34 +12,33 @@ A modern and responsive React application built with Vite and TypeScript, used f
 - ⚡ **Performance Optimized**: Memoized calculations and efficient re-renders
 - 🎨 **Modern UI**: Clean and professional interface with smooth animations
 
-## 🛠️ Technologies Used in the React Application
+## 🛠️ Technologies Used
 
 ### ⚛️ Core Libraries
-- **React**: A JavaScript library for building user interfaces.
-- **React DOM**: Provides DOM-specific methods that can be used at the top level of your app.:contentReference[oaicite:8]{index=8}
+- **React**: Builds user interfaces using components.
+- **React DOM**: Connects React with the browser's DOM.
 
 ### ⚙️ Build Tools & Configuration
-- **Vite**: :contentReference[oaicite:10]{index=10}
-- **@vitejs/plugin-react**: :contentReference[oaicite:13]{index=13}:contentReference[oaicite:15]{index=15}
+- **Vite**: Fast build tool and dev server.
+- **@vitejs/plugin-react**: Adds React support to Vite with fast refresh.
 
 ### 🎨 Styling
-- **Tailwind CSS**: :contentReference[oaicite:17]{index=17}
-- **PostCSS**: :contentReference[oaicite:20]{index=20}
-- **Autoprefixer**: :contentReference[oaicite:23]{index=23}:contentReference[oaicite:25]{index=25}
+- **Tailwind CSS**: Utility-first CSS framework for custom UI.
+- **PostCSS**: Processes and transforms CSS with plugins.
+- **Autoprefixer**: Adds vendor prefixes to CSS for cross-browser support.
 
 ### 🧰 Development Dependencies
-- **TypeScript**: :contentReference[oaicite:27]{index=27}
-- **@types/react** & **@types/react-dom**: :contentReference[oaicite:30]{index=30}
-- **ESLint**: :contentReference[oaicite:33]{index=33}
-- **@eslint/js**: :contentReference[oaicite:36]{index=36}
-- **eslint-plugin-react-hooks**: :contentReference[oaicite:39]{index=39}
-- **eslint-plugin-react-refresh**: :contentReference[oaicite:42]{index=42}
-- **typescript-eslint**: :contentReference[oaicite:45]{index=45}
-- **Globals**: :contentReference[oaicite:48]{index=48}:contentReference[oaicite:50]{index=50}
+- **TypeScript**: Adds static typing to JavaScript.
+- **@types/react / @types/react-dom**: Type definitions for React and React DOM.
+- **ESLint**: Lints code for errors and style issues.
+- **@eslint/js**: Provides standard ESLint rules.
+- **eslint-plugin-react-hooks**: Enforces rules for React Hooks usage.
+- **eslint-plugin-react-refresh**: Ensures compatibility with fast refresh.
+- **typescript-eslint**: Integrates TypeScript with ESLint.
+- **Globals**: Defines global variables for linting.
 
 ### 🖼️ UI Components
-- **Lucide React**: :contentReference[oaicite:52]{index=52}:contentReference[oaicite:54]{index=54}
-
+- **Lucide React**: Provides consistent icon components for React.
 
 ## Quick Start
 
