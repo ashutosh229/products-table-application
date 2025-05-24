@@ -32,21 +32,17 @@ export const updateProductTitle = async (
   id: number,
   title: string
 ): Promise<Product> => {
-  try {
-    const productIndex = products.findIndex((product) => {
-      return product.id === id;
-    });
-    if (productIndex === -1) {
-      //error handling to be done
-    }
-    const updatedProduct = { ...products[productIndex], title };
-    products[productIndex] = updatedProduct;
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(updatedProduct), DELAY);
-    });
-  } catch (error) {
+  const productIndex = products.findIndex((product) => {
+    return product.id === id;
+  });
+  if (productIndex === -1) {
     //error handling to be done
   }
+  const updatedProduct = { ...products[productIndex], title };
+  products[productIndex] = updatedProduct;
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(updatedProduct), DELAY);
+  });
 };
 
 export const deleteProduct = async (id: number): Promise<void> => {
