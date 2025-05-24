@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { fetchProducts, updateProductTitle } from "./api/products.api";
+import {
+  deleteProduct,
+  fetchProducts,
+  updateProductTitle,
+} from "./api/products.api";
 import { Product } from "./types/products";
 
 const App = () => {
@@ -33,6 +37,15 @@ const App = () => {
       setProducts(products.map((p) => (p.id === id ? updatedProduct : p)));
     } catch (err) {
       console.error("Failed to update product title:", err);
+    }
+  };
+
+  const handleDeleteProduct = async (id: number) => {
+    try {
+      await deleteProduct(id);
+      setProducts(products.filter((p) => p.id !== id));
+    } catch (err) {
+      console.error("Failed to delete product:", err);
     }
   };
 

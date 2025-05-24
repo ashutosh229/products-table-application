@@ -46,14 +46,10 @@ export const updateProductTitle = async (
 };
 
 export const deleteProduct = async (id: number): Promise<void> => {
-  try {
-    products = products.filter((product) => {
-      return product.id !== id;
-    });
-    return new Promise((resolve) => {
-      setTimeout(resolve, DELAY);
-    });
-  } catch (error) {
-    //error handling to be done
-  }
+  products = products.filter((product) => {
+    return product.id !== id;
+  });
+  return new Promise((resolve) => {
+    setTimeout(resolve, DELAY);
+  });
 };
