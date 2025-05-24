@@ -13,18 +13,18 @@ export const fetchProducts = async (): Promise<Product[]> => {
     }
     const response = await fetch("https://dummyjson.com/products");
     if (!response.ok) {
-      //error handling to be done
+      throw new Error("Response cannot be fetched properly");
     }
     const data = await response.json();
     if (!data || !data.products) {
-      //error handling to be done
+      throw new Error("Invalid data format");
     }
     products = data.products;
     return new Promise((resolve) => {
       setTimeout(() => resolve([...products]), DELAY);
     });
   } catch (error) {
-    //error handling to be done
+    throw new Error("Failed to fetch products");
   }
 };
 
