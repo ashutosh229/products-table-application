@@ -1,6 +1,10 @@
 # Products Table Application
 
-A modern and responsive React application built with Vite and TypeScript, used for managing and filtering product data via tables.
+A powerful and elegant React + TypeScript application built with Vite, designed for efficiently managing product data in a tabular format with advanced features like inline editing, local storage, and real-time filtering.
+
+## 🖼️ Preview
+
+![Product Table Screenshot](./assets/preview_screenshot.jpg)
 
 ## Features
 
@@ -64,5 +68,4 @@ npm run build
 
 ## 🌐 Deployed URL
 
-Check out the live application here: [Deployed URL](https://products-table-application.vercel.app/)
-
+🔗 [Click here to view the live application](https://products-table-application.vercel.app/)
