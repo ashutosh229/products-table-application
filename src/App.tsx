@@ -4,8 +4,8 @@ import {
   fetchProducts,
   updateProductTitle,
 } from "./api/products.api";
-import { Product } from "./types/products";
 import ProductTable from "./components/ProductTable";
+import type { Product } from "./types/products";
 
 const App = () => {
   //states for managing the products
