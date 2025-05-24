@@ -15,10 +15,12 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  //hook which triggers on loading the page
   useEffect(() => {
     loadProducts();
   }, []);
 
+  //handler for loading the products
   const loadProducts = async () => {
     try {
       setIsLoading(true);
@@ -32,6 +34,7 @@ const App = () => {
     }
   };
 
+  //handler for updating the title of the product
   const handleUpdateTitle = async (id: number, title: string) => {
     try {
       const updatedProduct = await updateProductTitle(id, title);
@@ -41,6 +44,7 @@ const App = () => {
     }
   };
 
+  //handler for deleting the product
   const handleDeleteProduct = async (id: number) => {
     try {
       await deleteProduct(id);
@@ -50,6 +54,7 @@ const App = () => {
     }
   };
 
+  //UI for the main application
   return (
     <>
       <div className="min-h-screen bg-gray-50 py-8">
@@ -58,6 +63,7 @@ const App = () => {
             <h1 className="text-3xl font-bold text-gray-900">
               Products Table Application
             </h1>
+            {/* error state */}
             {error && (
               <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-lg">
                 {error}

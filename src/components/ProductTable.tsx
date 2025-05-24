@@ -56,6 +56,7 @@ const ProductTable: React.FC<ProductTableProps> = ({
     setEditValue(product.title);
   };
 
+  //handler for saving the edited title
   const handleSave = async (id: number) => {
     try {
       setUpdating(id);
@@ -66,6 +67,7 @@ const ProductTable: React.FC<ProductTableProps> = ({
     }
   };
 
+  //handler for deleting the product
   const handleDelete = async (id: number) => {
     try {
       setDeleting(id);
@@ -75,6 +77,7 @@ const ProductTable: React.FC<ProductTableProps> = ({
     }
   };
 
+  //handler for resetting the filters
   const resetFilters = () => {
     setFilters({
       title: "",
