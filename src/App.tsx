@@ -5,6 +5,7 @@ import {
   updateProductTitle,
 } from "./api/products.api";
 import { Product } from "./types/products";
+import ProductTable from "./components/ProductTable";
 
 const App = () => {
   //states for managing the products
@@ -51,7 +52,29 @@ const App = () => {
 
   return (
     <>
-      <div>hello</div>
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold text-gray-900">
+              Products Table Application
+            </h1>
+            {error && (
+              <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                {error}
+              </div>
+            )}
+          </div>
+
+          <div className="bg-white rounded-lg shadow p-6">
+            <ProductTable
+              products={products}
+              isLoading={isLoading}
+              onUpdateTitle={handleUpdateTitle}
+              onDeleteProduct={handleDeleteProduct}
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
